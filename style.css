@@ -4,7 +4,27 @@
     box-sizing: border-box;
 }
 .Penka {
-    background-color: black;
+    width: 100%;
+    height: 620px;
+    background-color: linear-gradient(#87CEEB, #E0F6FF);
     position: relative;
 }
-.Mario
+.Mario {
+    bottom: 0;
+    width: 80px;
+    position: absolute;
+    animation: Mario-animation 500ms;
+}
+@keyframes Mario-animation {
+    from {
+        bottom: 0;
+    } to {
+        bottom: 80px;
+    } to {
+        bottom: 100px;
+    } to {
+        bottom: 80px;
+    } to {
+        bottom: 0;
+    }
+}
