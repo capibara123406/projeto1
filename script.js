@@ -3,15 +3,16 @@ const bI = document.getElementById('b');
 const btn = document.getElementById('btn');
 const Saida = document.getElementById('rst');
 btn.onclick = function () {
-    const a = parseFloat.value(aI);
-    const b = parseFloat.value(bI);
-    if (a > 100 && b > 200) {
-        const pi = ((a * 0.08) + (b * 0.12));
-        Saida.textContent = 'pinto: ' + pi;
-    } else if (a > 300 && b > 400) {
-        const pa = ((((a * 1.58) + (b * 2.43) + 30) * 0.10) + 0.25);
-        Saida.textContent = 'Total: ' + pa;
+    let base = 30;
+    const aa = +aI.value;
+    const bb = bI.value;
+    if (aa >= 150 && bb >= 200) {
+        base += ((a * 0.10) * bb);
+        Saida.textContent = 'Total: ' + base;
+    } else if (aa >= 250 && bb >= 330) {
+        base += ((((aa * 1.54) * 0.58)(bb * 2.34) + 20));
+        Saida.textContent = 'Total: ' + base;
     } else {
-        Saida.textContent = 'Sai daqui seu bosta';
+        Saida.textContent = 'Total: ' + base;
     }
 }
